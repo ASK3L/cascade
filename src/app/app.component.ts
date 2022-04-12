@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cascade';
+  constructor(private e:ElementRef<HTMLElement>){
+  let element=e.nativeElement;
+  element.style.scrollSnapType='x mandatory'
+  }
 }
